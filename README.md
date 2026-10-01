@@ -1,4 +1,4 @@
-# 💗 PinkCV — AI Resume Analyzer
+#  AI Resume Analyzer
 
 A clean, modular Streamlit app that compares a PDF resume with a pasted job description using the Groq API and strict structured JSON output.
 
