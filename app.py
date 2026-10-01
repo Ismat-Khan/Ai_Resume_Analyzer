@@ -7,7 +7,7 @@ from groq_analyzer import analyze_resume
 
 
 st.set_page_config(
-    page_title=" AI Resume Analyzer",
+    page_title="AI Resume Analyzer",
     page_icon="🔎",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -96,7 +96,7 @@ def render_list(items):
 
 st.markdown("""
 <div class="hero">
-    <h1>💗 PinkCV AI Resume Analyzer</h1>
+    <h1>🔎 AI Resume Analyzer</h1>
     <p>Compare your resume with a job description using Groq AI and discover your match score, ATS keywords, skill gaps, resume problems, and practical recommendations.</p>
 </div>
 """, unsafe_allow_html=True)
