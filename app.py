@@ -24,7 +24,12 @@ st.markdown("""
         linear-gradient(135deg, #fff9fc 0%, #ffeaf5 48%, #fff 100%);
     font-family: 'Inter', sans-serif;
 }
-.block-container { max-width: 1200px; padding-top: 2rem; padding-bottom: 4rem; }
+
+.block-container {
+    max-width: 1200px;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
 
 .hero, .glass-card {
     border: 1px solid rgba(255,255,255,.78);
@@ -33,43 +38,155 @@ st.markdown("""
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 }
-.hero { padding: 2rem 2.2rem; border-radius: 28px; margin-bottom: 1.5rem; }
-.hero h1 { margin: 0; color: #92245d; font-size: 2.55rem; font-weight: 800; letter-spacing: -1px; }
-.hero p { color: #705567; margin: .6rem 0 0; }
 
-.glass-card { padding: 1.25rem 1.4rem; border-radius: 22px; margin-bottom: 1rem; }
-.section-title { color: #92245d; font-size: 1.1rem; font-weight: 800; margin-bottom: .65rem; }
-.muted { color: #806878; line-height: 1.65; }
+.hero {
+    padding: 2rem 2.2rem;
+    border-radius: 28px;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    margin: 0;
+    color: #92245d;
+    font-size: 2.55rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    color: #705567;
+    margin: .6rem 0 0;
+}
+
+.glass-card {
+    padding: 1.25rem 1.4rem;
+    border-radius: 22px;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    color: #92245d;
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: .65rem;
+}
+
+.muted {
+    color: #806878;
+    line-height: 1.65;
+}
 
 .score-card {
-    text-align:center; padding:1.55rem; border-radius:24px;
+    text-align:center;
+    padding:1.55rem;
+    border-radius:24px;
     background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(255,220,238,.68));
     border:1px solid rgba(255,255,255,.9);
     box-shadow:0 15px 45px rgba(177,49,112,.14);
 }
-.score { font-size:4rem; line-height:1; font-weight:800; color:#d62d7b; }
-.score-label { color:#77586a; margin-top:.55rem; font-weight:650; }
+
+.score {
+    font-size:4rem;
+    line-height:1;
+    font-weight:800;
+    color:#d62d7b;
+}
+
+.score-label {
+    color:#77586a;
+    margin-top:.55rem;
+    font-weight:650;
+}
 
 .pill {
-    display:inline-block; padding:.38rem .68rem; margin:.22rem .18rem;
-    border-radius:999px; background:rgba(255,228,242,.9);
-    border:1px solid rgba(214,45,123,.14); color:#8e2459;
-    font-size:.86rem; font-weight:650;
+    display:inline-block;
+    padding:.38rem .68rem;
+    margin:.22rem .18rem;
+    border-radius:999px;
+    background:rgba(255,228,242,.9);
+    border:1px solid rgba(214,45,123,.14);
+    color:#8e2459;
+    font-size:.86rem;
+    font-weight:650;
 }
-.pill-green { background:rgba(227,250,238,.88); color:#176b43; border-color:rgba(23,107,67,.12); }
-.pill-red { background:rgba(255,233,238,.92); color:#a1264f; border-color:rgba(161,38,79,.12); }
+
+.pill-green {
+    background:rgba(227,250,238,.88);
+    color:#176b43;
+    border-color:rgba(23,107,67,.12);
+}
+
+.pill-red {
+    background:rgba(255,233,238,.92);
+    color:#a1264f;
+    border-color:rgba(161,38,79,.12);
+}
 
 div[data-testid="stFileUploaderDropzone"] {
-    background:rgba(255,255,255,.48); border:1px dashed rgba(214,45,123,.35); border-radius:18px;
+    background:rgba(255,255,255,.48);
+    border:1px dashed rgba(214,45,123,.35);
+    border-radius:18px;
 }
-.stTextArea textarea { background:rgba(255,255,255,.58) !important; border-radius:18px !important; }
+
+/* Job description */
+.stTextArea textarea {
+    background:rgba(255,242,248,.95) !important;
+    color:#6b2145 !important;
+    border:1px solid rgba(146,36,93,.24) !important;
+    border-radius:18px !important;
+    font-size:15px !important;
+    line-height:1.6 !important;
+}
+
+.stTextArea textarea::placeholder {
+    color:#9b6b82 !important;
+    opacity:1 !important;
+}
+
+.stTextArea textarea:focus {
+    border-color:#b83d72 !important;
+    box-shadow:0 0 0 1px rgba(184,61,114,.18) !important;
+}
+
+/* Resume problems and recommendations */
+.result-item {
+    background:rgba(255,238,246,.95);
+    border-left:4px solid #92245d;
+    border-radius:12px;
+    padding:12px 16px;
+    margin-bottom:10px;
+    color:#6b2145 !important;
+    font-size:15px;
+    line-height:1.6;
+    box-shadow:0 4px 14px rgba(146,36,93,.06);
+}
+
+.result-item * {
+    color:#6b2145 !important;
+}
+
 .stButton > button {
-    width:100%; border:0; border-radius:15px; padding:.78rem 1rem;
-    background:linear-gradient(90deg,#d62d7b,#f05a9b); color:white;
-    font-weight:800; box-shadow:0 10px 24px rgba(214,45,123,.24);
+    width:100%;
+    border:0;
+    border-radius:15px;
+    padding:.78rem 1rem;
+    background:linear-gradient(90deg,#d62d7b,#f05a9b);
+    color:white;
+    font-weight:800;
+    box-shadow:0 10px 24px rgba(214,45,123,.24);
 }
-.stButton > button:hover { background:linear-gradient(90deg,#c4246d,#e84b91); color:white; }
-.footer { text-align:center; color:#8c7080; font-size:.82rem; margin-top:2rem; }
+
+.stButton > button:hover {
+    background:linear-gradient(90deg,#c4246d,#e84b91);
+    color:white;
+}
+
+.footer {
+    text-align:center;
+    color:#8c7080;
+    font-size:.82rem;
+    margin-top:2rem;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -78,20 +195,29 @@ def render_pills(items, css_class=""):
     if not items:
         st.markdown('<span class="muted">None identified.</span>', unsafe_allow_html=True)
         return
+
     output = []
     for item in items:
         output.append(
             f'<span class="pill {css_class}">{html.escape(str(item))}</span>'
         )
+
     st.markdown("".join(output), unsafe_allow_html=True)
 
 
 def render_list(items):
     if not items:
-        st.markdown('<span class="muted">None identified.</span>', unsafe_allow_html=True)
+        st.markdown(
+            '<span class="muted">None identified.</span>',
+            unsafe_allow_html=True
+        )
         return
+
     for item in items:
-        st.markdown(f"- {html.escape(str(item))}")
+        st.markdown(
+            f'<div class="result-item">{html.escape(str(item))}</div>',
+            unsafe_allow_html=True
+        )
 
 
 st.markdown("""
@@ -104,7 +230,10 @@ st.markdown("""
 left, right = st.columns([1, 1], gap="large")
 
 with left:
-    st.markdown('<div class="section-title">📄 1. Upload your resume</div>', unsafe_allow_html=True)
+    st.markdown(
+        '<div class="section-title">📄 1. Upload your resume</div>',
+        unsafe_allow_html=True
+    )
     resume_file = st.file_uploader(
         "Choose a PDF resume",
         type=["pdf"],
@@ -112,7 +241,10 @@ with left:
     )
 
 with right:
-    st.markdown('<div class="section-title">📝 2. Paste the job description</div>', unsafe_allow_html=True)
+    st.markdown(
+        '<div class="section-title">📝 2. Paste the job description</div>',
+        unsafe_allow_html=True
+    )
     job_description = st.text_area(
         "Job description",
         height=250,
@@ -146,7 +278,10 @@ if analyze_clicked:
             st.stop()
 
     if len(resume_text.strip()) < 80:
-        st.error("Very little text could be extracted. Please use a text-based PDF or export the resume again as PDF.")
+        st.error(
+            "Very little text could be extracted. Please use a text-based PDF "
+            "or export the resume again as PDF."
+        )
         st.stop()
 
     with st.spinner("Groq is comparing your resume with the job description..."):
@@ -164,56 +299,94 @@ result = st.session_state.get("analysis")
 
 if result:
     st.markdown("---")
-    st.markdown('<div class="section-title">📊 Analysis Results</div>', unsafe_allow_html=True)
+    st.markdown(
+        '<div class="section-title">📊 Analysis Results</div>',
+        unsafe_allow_html=True
+    )
 
     score_col, summary_col = st.columns([1, 2], gap="large")
+
     with score_col:
         st.markdown(
-            f'<div class="score-card"><div class="score">{result["match_score"]}%</div><div class="score-label">Overall Resume Match</div></div>',
+            f'<div class="score-card"><div class="score">{result["match_score"]}%</div>'
+            f'<div class="score-label">Overall Resume Match</div></div>',
             unsafe_allow_html=True,
         )
 
     with summary_col:
         st.markdown(
-            f'<div class="glass-card"><div class="section-title">📋 Final Result</div><div class="muted">{html.escape(result["final_result"])}</div></div>',
+            f'<div class="glass-card"><div class="section-title">📋 Final Result</div>'
+            f'<div class="muted">{html.escape(result["final_result"])}</div></div>',
             unsafe_allow_html=True,
         )
 
     c1, c2 = st.columns(2, gap="large")
+
     with c1:
-        st.markdown('<div class="glass-card"><div class="section-title">✅ Matching Skills</div>', unsafe_allow_html=True)
+        st.markdown(
+            '<div class="glass-card"><div class="section-title">✅ Matching Skills</div>',
+            unsafe_allow_html=True
+        )
         render_pills(result["matching_skills"], "pill-green")
         st.markdown("</div>", unsafe_allow_html=True)
+
     with c2:
-        st.markdown('<div class="glass-card"><div class="section-title">❌ Missing Skills</div>', unsafe_allow_html=True)
+        st.markdown(
+            '<div class="glass-card"><div class="section-title">❌ Missing Skills</div>',
+            unsafe_allow_html=True
+        )
         render_pills(result["missing_skills"], "pill-red")
         st.markdown("</div>", unsafe_allow_html=True)
 
     c3, c4 = st.columns(2, gap="large")
+
     with c3:
-        st.markdown('<div class="glass-card"><div class="section-title">🔑 ATS Keywords Found</div>', unsafe_allow_html=True)
+        st.markdown(
+            '<div class="glass-card"><div class="section-title">🔑 ATS Keywords Found</div>',
+            unsafe_allow_html=True
+        )
         render_pills(result["ats_keywords"]["found"], "pill-green")
         st.markdown("</div>", unsafe_allow_html=True)
+
     with c4:
-        st.markdown('<div class="glass-card"><div class="section-title">🔎 ATS Keywords Missing</div>', unsafe_allow_html=True)
+        st.markdown(
+            '<div class="glass-card"><div class="section-title">🔎 ATS Keywords Missing</div>',
+            unsafe_allow_html=True
+        )
         render_pills(result["ats_keywords"]["missing"], "pill-red")
         st.markdown("</div>", unsafe_allow_html=True)
 
     c5, c6 = st.columns(2, gap="large")
+
     with c5:
-        st.markdown('<div class="glass-card"><div class="section-title">⚠️ Resume Problems</div>', unsafe_allow_html=True)
+        st.markdown(
+            '<div class="glass-card"><div class="section-title">⚠️ Resume Problems</div>',
+            unsafe_allow_html=True
+        )
         render_list(result["resume_problems"])
         st.markdown("</div>", unsafe_allow_html=True)
+
     with c6:
-        st.markdown('<div class="glass-card"><div class="section-title">💡 Recommendations</div>', unsafe_allow_html=True)
+        st.markdown(
+            '<div class="glass-card"><div class="section-title">💡 Recommendations</div>',
+            unsafe_allow_html=True
+        )
         render_list(result["recommendations"])
         st.markdown("</div>", unsafe_allow_html=True)
 
-    st.markdown('<div class="footer">AI-generated analysis is guidance, not a guarantee of ATS screening or hiring outcomes.</div>', unsafe_allow_html=True)
+    st.markdown(
+        '<div class="footer">AI-generated analysis is guidance, not a guarantee of ATS screening or hiring outcomes.</div>',
+        unsafe_allow_html=True
+    )
+
 else:
     st.markdown("""
     <div class="glass-card">
         <div class="section-title">🚀 How it works</div>
-        <div class="muted">Upload your PDF → paste the job description → click Analyze → review your match score, skills, ATS keywords, resume problems, and recommendations.</div>
+        <div class="muted">
+            Upload your PDF → paste the job description → click Analyze →
+            review your match score, skills, ATS keywords, resume problems,
+            and recommendations.
+        </div>
     </div>
     """, unsafe_allow_html=True)
