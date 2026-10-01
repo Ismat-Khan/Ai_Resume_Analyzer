@@ -7,8 +7,8 @@ from groq_analyzer import analyze_resume
 
 
 st.set_page_config(
-    page_title="PinkCV — AI Resume Analyzer",
-    page_icon="💗",
+    page_title=" AI Resume Analyzer",
+    page_icon="🔎",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
