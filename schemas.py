@@ -1,32 +1,13 @@
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 
 
 class ATSKeywords(BaseModel):
-    model_config = ConfigDict(
-        extra="forbid",
-        json_schema_extra={
-            "required": ["found", "missing"],
-            "additionalProperties": False,
-        },
-    )
-
     found: list[str] = Field(default_factory=list)
     missing: list[str] = Field(default_factory=list)
 
 
 class ResumeAnalysis(BaseModel):
-    model_config = ConfigDict(
-        extra="forbid",
-        json_schema_extra={
-            "additionalProperties": False,
-        },
-    )
-
-    match_score: int = Field(
-        ge=0,
-        le=100,
-        description="Overall resume match score from 0 to 100.",
-    )
+    match_score: int = Field(ge=0, le=100)
 
     matching_skills: list[str] = Field(default_factory=list)
 
